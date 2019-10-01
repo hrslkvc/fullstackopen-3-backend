@@ -26,7 +26,7 @@ app.use(
 );
 
 app.get("/info", (req, res) => {
-    persons = Person.find({}).then(persons => {
+    Person.find({}).then(persons => {
         res.send(
             `
                 <p>The phonebook contains info for ${persons.length} people<p>
